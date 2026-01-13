@@ -1,0 +1,12 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+div {
+    background-color: rgb(255, 243, 243);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
