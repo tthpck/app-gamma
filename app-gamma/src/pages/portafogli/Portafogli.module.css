@@ -1,0 +1,11 @@
+/* PAGINA */
+.portfolioList {
+  display: grid;
+
+background-color: hsl(0, 0%, 96%);
+
+  gap: 12px;
+  padding: 16px;
+
+
+}
