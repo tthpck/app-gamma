@@ -1,0 +1,11 @@
+.logo{
+    width: 50px;
+    border-radius: 15px;
+}
+
+.mainCard{
+    display: grid;
+    padding:15px
+
+}
+

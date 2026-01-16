@@ -1,5 +1,5 @@
 import Layout from './components/Layout'
-import Home from './pages/Home'
+import Home from './pages/home/Home.tsx'
 import Portafogli from './pages/portafogli/Portafogli'
 import Profilo from './pages/Profilo'
 import Analisi from './pages/Analisi.tsx'
