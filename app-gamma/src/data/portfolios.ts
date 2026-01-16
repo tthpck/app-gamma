@@ -13,6 +13,7 @@ export const portfolios = [{
     geographicalCoverage: 'Globale',
     balancing: 'Mensili, ogni 1 domenica del mese',
     communications: 'lettera trimestrale agli investitori',
+    description: 'Basic è il portafoglio completo e dinamico adatto all’investitore con una liquidità minima, un orizzonte temporale ampio e una propensione al rischio medio-bassa. Registrati al sito per controllare i rendimenti storici e ricevere ogni aggiornamento sul portafoglio gratuitamente!    ',
 },{
     id: 'essential',
     name: 'Essential',
@@ -28,6 +29,8 @@ export const portfolios = [{
     geographicalCoverage: 'Globale',
     balancing: 'Mensili, ogni 1 domenica del mese',
     communications: 'lettera trimestrale agli investitori',
+    description: 'Essential è il portafoglio completo e dinamico adatto all’investitore con una liquidità ridotta, un orizzonte temporale ampio e una propensione al rischio media. Registrati al sito per controllare i rendimenti storici e ricevere ogni aggiornamento sul portafoglio gratuitamente!',
+
 }, {
     id: 'advanced',
     name: 'Advanced',
@@ -43,7 +46,11 @@ export const portfolios = [{
     geographicalCoverage: 'Globale',
     balancing: 'Mensili, ogni 1 domenica del mese',
     communications: 'Lettera trimestrale agli investitori',
-    extra: 'Garanzia di performance'
+    extra: 'Garanzia di performance',
+    description: 'Advanced è il portafoglio completo e dinamico adatto all’investitore con una liquidità moderata, un orizzonte temporale ampio e una propensione al rischio media. Registrati al sito per controllare i rendimenti storici del portafoglio gratuitamente! ',
+    help: 'Hai dubbi o domande? Prenota una call gratuita e senza impegno su Telegram o su WhatsApp con uno dei nostri esperti.',
+    subscribeURL: 'https://www.gammainvestimenti.it/checkout-2/?group=1'
+
 },{
     id: 'master',
     name: 'Master',
@@ -59,5 +66,9 @@ export const portfolios = [{
     geographicalCoverage: 'Globale',
     balancing: 'Mensili, ogni 1 domenica del mese',
     communications: 'Lettera trimestrale agli investitori',
-    extra: 'Garanzia di performance'
+    extra: 'Garanzia di performance',
+    description: 'Master è il portafoglio completo e dinamico adatto all’investitore con una liquidità significativa, un orizzonte temporale ampio e una propensione al rischio alta. Registrati al sito per controllare i rendimenti storici del portafoglio gratuitamente!',
+    help: 'Hai dubbi o domande? Prenota una call gratuita e senza impegno su Telegram o su WhatsApp con uno dei nostri esperti.',
+    subscribeURL: 'https://www.gammainvestimenti.it/checkout-2/?group=6'
+ 
 }]

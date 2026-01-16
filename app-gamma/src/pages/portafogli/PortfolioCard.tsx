@@ -1,5 +1,7 @@
-import styles from './Portafogli.module.css'
+import styles from './PortfolioCard.module.css'
 import {NavLink} from 'react-router-dom'
+
+
 
 type Props = {
     portfolio: {
