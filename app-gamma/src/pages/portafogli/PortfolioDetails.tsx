@@ -1,12 +1,21 @@
-import { portfolios } from "../../../src/data/portfolios";
+import { getPortfolioById } from "../../../src/data/portfolios";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const PortfolioDetails = () => {
-  const { id } = useParams();
+  const { id } = useParams<{ id: string }>();
 
-  const portfolio = portfolios.find((p) => p.id === id);
+  if (!id) return <div>Portafoglio non valido!</div>;
 
-  if (!portfolio) return <div>Portafoglio non trovato</div>;
+  const portfolio = getPortfolioById(id);
+
+  if (!portfolio)
+    return (
+      <div>
+        <p>Questo Portafoglio non esiste.</p>
+        <Link to="/portafogli">Torna ai portafogli</Link>
+      </div>
+    );
   else
     return (
       <div>

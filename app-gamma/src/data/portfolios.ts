@@ -1,3 +1,5 @@
+
+
 export const portfolios = [{
     id: 'basic',
     name: 'Basic',
@@ -72,3 +74,8 @@ export const portfolios = [{
     subscribeURL: 'https://www.gammainvestimenti.it/checkout-2/?group=6'
  
 }]
+
+
+export function getPortfolioById (id: string) {
+    return portfolios.find(p => p.id === id)
+}
