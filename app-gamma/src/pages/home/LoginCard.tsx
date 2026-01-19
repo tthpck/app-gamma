@@ -1,14 +1,15 @@
-import styles from './HomeCards.module.css'
-
+import styles from "./HomeCards.module.css";
 
 type Props = {
-    userName: string
-}
+  userName: string | null;
+};
 
-const LoginCard = ({userName}: Props) => {
-  return (<>
-{!userName && <div className = {styles.homeCard}>Registrati o Accedi</div>}  
-</>)
-}
+const LoginCard = ({ userName }: Props) => {
+  return (
+    <>
+      {!userName && <div className={styles.homeCard}>Registrati o Accedi</div>}
+    </>
+  );
+};
 
-export default LoginCard
+export default LoginCard;
