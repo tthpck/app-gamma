@@ -3,8 +3,8 @@
 export const portfolios = [{
     id: 'basic',
     name: 'Basic',
-    monthlyPrice: 'FREE',
-    yearlyPrice: 'FREE',
+    monthlyPriceCents: 'FREE',
+    yearlyPriceCents: 'FREE',
     instruments: 'ETF e ETC',
     composition: 'Azionario e oro',
     minCapital: 1000,
@@ -19,8 +19,8 @@ export const portfolios = [{
 },{
     id: 'essential',
     name: 'Essential',
-    monthlyPrice: 'FREE',
-    yearlyPrice: 'FREE',
+    monthlyPriceCents: 'FREE',
+    yearlyPriceCents: 'FREE',
     instruments: 'ETF e ETC',
     composition: 'Azionario e oro', 
     minCapital: 5000,
@@ -36,8 +36,8 @@ export const portfolios = [{
 }, {
     id: 'advanced',
     name: 'Advanced',
-    monthlyPrice: 30,
-    yearlyPrice: 3000000,
+    monthlyPriceCents: 3000,
+    yearlyPriceCents: 300000000,
     instruments: 'ETF settoriali e tematicie ETC materie prime ETN criptovalute',
     composition: 'Azionario, materie prime, criptovalute', 
     minCapital: 10000,
@@ -56,8 +56,8 @@ export const portfolios = [{
 },{
     id: 'master',
     name: 'Master',
-    monthlyPrice: 80,
-    yearlyPrice: 80000000,
+    monthlyPriceCents: 8000,
+    yearlyPriceCents: 8000000000,
     instruments: 'ETF settoriali e tematici ETC materie prime ETN criptovalute Azioni globali',
     composition: 'Azionario, materie prime, criptovalute', 
     minCapital: 25000,

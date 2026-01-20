@@ -1,7 +1,8 @@
 export type Portfolio = {
       name: string
       id: string
-      monthlyPrice: string | number
+      monthlyPriceCents: string | number
+      yearlyPriceCents: string | number
       minCapital: number
       timeHorizon: string
       instruments: string

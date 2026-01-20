@@ -1,6 +1,8 @@
 import styles from "./PortfolioCard.module.css";
 import { NavLink } from "react-router-dom";
 import type { Portfolio } from "../../types/portfolioTypes";
+import { formatMoney } from "../../utils/money";
+
 
 type Props = {
   portfolio: Portfolio;
@@ -10,7 +12,7 @@ const PortfolioCard = ({ portfolio }: Props) => {
   return (
     <div key={portfolio.id} className={styles.portfolioCard}>
       <div className={styles.titleCard}>{portfolio.name}</div>
-      <div className={styles.priceCard}>{portfolio.monthlyPrice}</div>
+      <div className={styles.priceCard}>{formatMoney(portfolio.monthlyPriceCents)}</div>
       <NavLink to={`/dettagli/${portfolio.id}`}>Scopri di piu</NavLink>
       <div className={styles.infoCard}>
         <p className={styles.infoTitle}>Portfolio minimo</p>

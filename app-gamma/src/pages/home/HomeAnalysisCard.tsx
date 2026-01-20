@@ -1,10 +1,12 @@
 import styles from './HomeCards.module.css'
+import { NavLink } from 'react-router-dom'
 
 const HomeAnalysisCard = () => {
   return (
-        <div className = {styles.homeCard}>
+
+        <NavLink to={'/analisi'}className = {styles.homeCard}>
       <div>Leggi le nostre analisi</div>
-    </div>
+    </NavLink>
   )
 }
 
