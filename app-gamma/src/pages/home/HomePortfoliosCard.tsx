@@ -1,10 +1,11 @@
 import styles from "./HomeCards.module.css";
+import { NavLink } from "react-router-dom";
 
 const HomePortfoliosCard = () => {
   return (
-    <div className={styles.homeCard}>
+    <NavLink to={`/questionario`}className={styles.homeCard}>
       <div>Scopri quale portafoglio Gamma fa al caso tuo</div>
-    </div>
+    </NavLink>
   );
 };
 

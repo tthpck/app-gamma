@@ -10,10 +10,9 @@ type Props = {
 
 const PortfolioCard = ({ portfolio }: Props) => {
   return (
-    <div key={portfolio.id} className={styles.portfolioCard}>
+    <NavLink to={`/dettagli/${portfolio.id}`} key={portfolio.id} className={styles.portfolioCard}>
       <div className={styles.titleCard}>{portfolio.name}</div>
       <div className={styles.priceCard}>{formatMoney(portfolio.monthlyPriceCents)}</div>
-      <NavLink to={`/dettagli/${portfolio.id}`}>Scopri di piu</NavLink>
       <div className={styles.infoCard}>
         <p className={styles.infoTitle}>Portfolio minimo</p>
         <p className={styles.infoDetails}>{portfolio.minCapital}</p>
@@ -26,7 +25,7 @@ const PortfolioCard = ({ portfolio }: Props) => {
         <p className={styles.infoTitle}>Strumenti</p>
         <p className={styles.infoDetails}>{portfolio.instruments}</p>
       </div>
-    </div>
+    </NavLink>
   );
 };
 

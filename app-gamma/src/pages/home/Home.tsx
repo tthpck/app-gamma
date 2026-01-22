@@ -5,6 +5,7 @@ import styles from './Home.module.css'
 import HomePortfoliosCard from './HomePortfoliosCard'
 import HomeAnalysisCard from './HomeAnalysisCard'
 import LoginCard from './LoginCard'
+import PortfoglioUpdateCountDown from './PortfoglioUpdateCountDown'
 
 
 function Home (){
@@ -21,6 +22,7 @@ return (
     <div>Prendi in mano il tuo futuro finanziario da oggi.</div>
     <LoginCard userName={userName}/>
 
+  <PortfoglioUpdateCountDown />
 
   <HomePortfoliosCard />
 

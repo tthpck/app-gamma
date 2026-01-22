@@ -7,6 +7,9 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import './App.css'
 import PortfolioDetails from './pages/portafogli/PortfolioDetails.tsx'
 import AnalysisDetails from './pages/analisi/AnalysisDetails.tsx'
+import QuestionnairePage from './pages/questionnaire/QuestionnairePage.tsx'
+import QuestionCard from './pages/questionnaire/QuestionCard.tsx'
+import ResultSuggestion from './pages/questionnaire/ResultSuggestion.tsx'
 
 const App = () => {
   return (
@@ -20,6 +23,9 @@ const App = () => {
             <Route path = "/profilo" element={<Profilo />} />
             <Route path = {`/dettagli/:id`} element={<PortfolioDetails/>}/>
             <Route path ={'analisi/:id'} element={<AnalysisDetails/>}/>
+            <Route path={'/questionario'} element={<QuestionnairePage/>}/>
+            <Route path={'/questionario/:id'} element={<QuestionCard/>}/>
+            <Route path = '/risultati/' element={<ResultSuggestion/>}/>
           </Routes>
         </Layout>
       </BrowserRouter>

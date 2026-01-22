@@ -12,6 +12,8 @@
 
   /* DEBUG */
   border: 2px solid red;
+  text-decoration: none;
+  color: black;
 }
 
 /* TITOLO */
