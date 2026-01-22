@@ -2,7 +2,7 @@ export const questionnaire = [
     {
     id: "1",
     question: "Come preferisci investire?",
-    option1: 'Preferisco seguire poco e delegare',
+    options1: 'Preferisco seguire poco e delegare',
     option2: 'Sono abbastanza attivo',
     option3: 'Mi ritengo piuttosto informat e attivo sul mercato'
 },
