@@ -1,4 +1,5 @@
-import styles from "./HomeCards.module.css";
+import styles from "./Home.module.css";
+import { NavLink } from "react-router-dom";
 
 type Props = {
   userName: string | null;

@@ -13,22 +13,30 @@ position: fixed;
 
 .navlink {
     all: unset;
-    font-family: arial;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: black;
     border: none;
-    color: rgb(81, 231, 81);
-
+    color: rgb(10, 221, 10);
     border-radius: 5px;
-
-
     flex: 1;
     height: 100%;
+    transition: all 0.02s;
+
+    -webkit-tap-highlight-color: transparent; /* per rimuovere effetto standard */
+    outline: none; /* per rimuovere effetto standard */
 }
 
-.active {
-  background-color: orange;
+
+.navlink-active {
+  background-color: black; /* SOLO il tuo stile */
+  color: white;
+
+}
+
+.navlink:active {
+  background-color: rgb(10, 221, 10);
   color: black;
+  
 }

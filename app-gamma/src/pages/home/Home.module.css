@@ -1,11 +1,51 @@
+body {
+    background-color: rgb(206, 206, 206);
+    margin: 0px;
+    color: black;
+}
+
+.homePage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 15px
+}
+.mainCard{
+    padding:15px;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 .logo{
-    width: 50px;
+    width: 100px;
     border-radius: 15px;
 }
 
-.mainCard{
-    display: grid;
-    padding:15px
-
+.welcomeCard {
+    font-size: 1.3em;
 }
+
+.homeCard {
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid rgb(10, 221, 10);
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    width: 80vw;
+    transition: all 0.02s;
+}
+
+.homeCard:active{
+    background-color: rgb(10, 221, 10);
+    width: 78vw;
+}
+
+
+
 
