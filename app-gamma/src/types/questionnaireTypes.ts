@@ -1,7 +1,14 @@
+export type QuestionOption = {
+    id: number;
+    option: string;
+    points: number;
+}
+
+
+
 export type Questionnaire = {
     id: string;
     question: string;
-    option1: string;
-    option2: string;
-    option3: string;
+    options: QuestionOption[]
+
 }

@@ -1,17 +1,12 @@
-body {
-    background-color: hsl(0, 0%, 89%);
-    text-align: center
-}
 
-.homeCard {
-    border: 1px solid greenyellow;
-    background-color: white;
+.optionButton {
+    border: 1px solid red;
     border-radius: 5px;
     height: fit-content;
     display: flex;
     flex-direction: column;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 15px;
@@ -19,4 +14,3 @@ body {
     color: black;
     text-align: center;
 }
-

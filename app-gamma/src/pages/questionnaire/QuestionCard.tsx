@@ -1,6 +1,10 @@
 import { useParams } from "react-router-dom";
 import { questionnaire } from "../../data/questionnaire";
 import { NavLink } from "react-router-dom";
+import QuestionnaireOption from "./QuestionnaireOption";
+import styles from './Questionnaire.module.css'
+
+
 
 const QuestionCard = () => {
   const { id } = useParams();
@@ -16,39 +20,22 @@ const QuestionCard = () => {
   const isFirst = currentIndex === Number(questionnaire[0].id);
   const isLast = currentIndex >= questionnaire.length;
 
-  function handleSelection(n: number) {
-    const rawPoints = localStorage.getItem("points");
-    const cleanPoints: number = rawPoints === null ? 0 : Number(rawPoints);
-    const updatedPoints = cleanPoints + n;
-    localStorage.setItem("points", String(updatedPoints));
-  }
 
   return (
     <div>
+          {!isFirst && (
+        <NavLink className = {styles.optionButton}to={`/questionario/${currentIndex - 1}`}>⬅</NavLink>
+      )}
       <div>{currentQuestionnaire?.question}</div>
-      <div>
-        <button onClick={() => handleSelection(10)}>
-          {currentQuestionnaire?.option1}
-        </button>
-        <button onClick={() => handleSelection(20)}>
-          {currentQuestionnaire?.option2}
-        </button>
-        <button onClick={() => handleSelection(30)}>
-          {currentQuestionnaire?.option3}
-        </button>
-      </div>
 
-      {!isFirst && (
-        <NavLink to={`/questionario/${currentIndex - 1}`}>Indietro</NavLink>
-      )}
-      {!isLast && (
-        <NavLink to={`/questionario/${currentIndex + 1}`}>Prossima</NavLink>
-      )}
-      {isLast && (
-        <NavLink to={`/risultati`}>Scopri il portafoglio adatto a te</NavLink>
-      )}
+        {currentQuestionnaire?.options?.map(option=>
+            <QuestionnaireOption isLast={isLast} pageId={currentIndex} key={option.id} option={option}/>
+        )}
+
+   
+
     </div>
   );
-};
+}
 
 export default QuestionCard;

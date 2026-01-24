@@ -7,9 +7,11 @@ type Props = {
 
 const Layout = ({ children }: Props) => {
   return (
+    <div className={styles.main}>
     <div className={styles.div}>
       {children}
       <BottomNav />
+    </div>
     </div>
   );
 };

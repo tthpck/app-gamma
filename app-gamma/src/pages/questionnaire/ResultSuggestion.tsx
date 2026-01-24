@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { pointsCheck } from "../../utils/pointsCheck";
+import styles from './Questionnaire.module.css'
 
 const ResultSuggestion = () => {
   const totalPoints = localStorage.getItem("points");
@@ -18,7 +19,7 @@ const ResultSuggestion = () => {
         “Questo questionario fornisce un’indicazione orientativa e non
         costituisce consulenza finanziaria.”
       </div>
-      <div>
+      <div className={styles.optionButton}>
         {`In base al tuo profilo, il piu' adatto e' il portafoglio ${pointsCheck(updatedPoints)} `}
       </div>
     </div>
