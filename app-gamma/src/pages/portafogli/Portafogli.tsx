@@ -5,7 +5,7 @@ import type { Portfolio } from "../../types/portfolioTypes";
 
 const Portafogli = () => {
   return (
-    <div className={styles.portfolioList}>
+    <div className={styles.portfolioPage}>
       {portfolios.map((portfolio: Portfolio) => {
         return <PortfolioCard key={portfolio.id} portfolio={portfolio} />;
       })}

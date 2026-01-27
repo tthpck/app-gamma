@@ -12,13 +12,13 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  padding: 20px 16px 90px;
+  padding: 20px 16px 90px ;
 }
 
 
 .mainCard {
   display: flex;
-  align-items: center;
+  align-items: center; 
   gap: 16px;
   padding: 8px 4px;
 }
@@ -36,16 +36,18 @@ h1 {
 
 .homeCard {
     background-color: hsl(0, 0%, 100%);
-      text-decoration: none;
+    text-decoration: none;
 
     border-radius: 16px;
     padding: 18px 16px;
-      width: 100%;
-  max-width: 420px;
-      border-left: 4px solid hsl(120, 91%, 45%);
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 420px;
+    border-left: 4px solid hsl(120, 91%, 45%);
 
     box-shadow: 0 8px 24px hsla(0, 0%, 0%, 0.06);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
+  
 }
 
 .homeCard:active {

@@ -4,66 +4,60 @@ body {
   color: hsl(0, 0%, 7%);
 }
 
-.portfolioList {
-    padding: 20px 16px 40px;
+h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.portfolioPage {
+  padding: 20px 16px 40px;
   display: flex;
   flex-direction: column;
   gap: 24px
 }
 
-
 .portfolioCard {
   background-color: white;
-
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-
-  padding: 14px;
-  border-radius: 12px;
-
-  /* DEBUG */
-  border: 2px solid red;
   text-decoration: none;
+
+  border-radius: 16px;
+  padding: 18px 16px;
+  border-left: 4px solid hsl(120, 91%, 45%);;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 420px;
+
   color: black;
+
+  box-shadow: 0 8px 24px hsla(0, 0%, 0%, 0.06);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.portfolioCard:active {
+  transform: scale(0.97);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* TITOLO */
-.titleCard {
-  font-size: 18px;
-  font-weight: bold;
+.portfolioCard strong {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111;
 }
 
-/* PREZZO */
-.priceCard {
-  font-size: 14px;
-  color: #555;
+.portfolioCard span { 
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #6b7280;
+  line-height: 1.3;
 }
 
-/* BOTTONE */
-.cta {
-  margin-top: 6px;
-  padding: 10px;
-  border-radius: 8px;
-  border: none;
-  background-color: black;
-  color: white;
+.headerCard {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 25px;
 }
-
-/* RIGA INFO */
 .infoCard {
   display: flex;
   justify-content: space-between;
-}
-
-/* LABEL */
-.infoTitle {
-  font-size: 13px;
-  color: #666;
-}
-
-/* VALORE */
-.infoDetails {
-  font-size: 13px;
-  font-weight: 500;
+  text-align: right;
+  padding: 6px 15px
 }

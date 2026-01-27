@@ -7,31 +7,41 @@ import ProfileIcon from "../../src/images/navbar/profilo.svg?react";
 import Icons from "./Icons";
 
 const BottomNav = () => {
-  console.log(PortfolioIcon);
   return (
     <nav className={styles.nav}>
-      <NavLink className={({ isActive }) =>
-    `${styles.navlink} ${isActive ? styles.active : ""}`
-  }
-   to="/">
+      <NavLink
+        className={({ isActive }) =>
+          `${styles.navlink} ${isActive ? styles.active : ""}`
+        }
+        to="/"
+      >
         <Icons Icon={HomeIcon} size={30} />
       </NavLink>
 
-      <NavLink className={({ isActive }) =>
-    `${styles.navlink} ${isActive ? styles.active : ""}`
-  } to="/portafogli">
+      <NavLink
+        className={({ isActive }) =>
+          `${styles.navlink} ${isActive ? styles.active : ""}`
+        }
+        to="/portafogli"
+      >
         <Icons Icon={PortfolioIcon} size={30} />
       </NavLink>
 
-      <NavLink className={({ isActive }) =>
-    `${styles.navlink} ${isActive ? styles.active : ""}`
-  } to="/analisi">
+      <NavLink
+        className={({ isActive }) =>
+          `${styles.navlink} ${isActive ? styles.active : ""}`
+        }
+        to="/analisi"
+      >
         <Icons Icon={AnalysisIcon} size={30} />
       </NavLink>
 
-      <NavLink className={({ isActive }) =>
-    `${styles.navlink} ${isActive ? styles.active : ""}`
-  }to="/profilo">
+      <NavLink
+        className={({ isActive }) =>
+          `${styles.navlink} ${isActive ? styles.active : ""}`
+        }
+        to="/profilo"
+      >
         <Icons Icon={ProfileIcon} size={30} />
       </NavLink>
     </nav>
