@@ -14,7 +14,7 @@
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-router-dom": "^7.12.0",
-    "vite-plugin-svgr": "^4.5.0"
+    "svgr": "^1.10.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
@@ -28,6 +28,7 @@
     "globals": "^16.5.0",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
-    "vite": "^7.3.1"
+    "vite": "^7.3.1",
+    "vite-plugin-svgr": "^4.5.0"
   }
 }

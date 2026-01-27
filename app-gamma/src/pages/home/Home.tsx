@@ -12,17 +12,10 @@ function Home() {
     <div className={styles.homePage}>
       <LoginCard userName={userName} />
       <div className={styles.mainCard}>
-        <img className={styles.logo} src={mainLogo} />
-        <div>Prendi in mano il tuo futuro finanziario da oggi.</div>
       </div>
-
-      {userName ? (
-        <div>E' un piacere rivederti, {userName}</div>
-      ) : (
-        <div className={styles.welcomeCard}>
-          <h3>Benvenuto/a!</h3>{" "}
-        </div>
-      )}
+      <div className={styles.welcomeCard}><h1>{userName? 'Bentornato' : 'Ciao'} {userName} ! </h1>
+      </div>
+      
 
       <PortfoglioUpdateCountDown />
 

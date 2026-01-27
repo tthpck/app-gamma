@@ -3,6 +3,7 @@ import { updatesDates } from "../../data/updatesDates";
 import type { UpdatesDates } from "../../types/updatesDatesTypes";
 import dayjs from "dayjs";
 import styles from "./Home.module.css";
+import { NavLink } from "react-router-dom";
 
 const PortfoglioUpdateCountDown = () => {
   const nextPortfolioUpdate = updatesDates.find(
@@ -35,10 +36,11 @@ const PortfoglioUpdateCountDown = () => {
     return () => clearInterval(intervalId);
   }, []);
   return (
-    <div className={styles.homeCard}>
-      <div>{`Il prossimo aggiornamento per i portafogli è previsto il ${nextPortfolioUpdateDate}`}</div>
-      <div>Tra {countdown}</div>
+    <NavLink to='/portafogli' className={`${styles.homeCard} ${styles.primary}`} >
+      <div className={styles.cardContent}><strong>Prossimo aggiornamento ai portafogli{` ${nextPortfolioUpdateDate}`}</strong>
+           <span>{countdown}</span>
     </div>
+    </NavLink>
   );
 };
 

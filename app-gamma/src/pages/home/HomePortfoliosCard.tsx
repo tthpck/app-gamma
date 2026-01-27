@@ -4,7 +4,10 @@ import { NavLink } from "react-router-dom";
 const HomePortfoliosCard = () => {
   return (
     <NavLink to={`/questionario`} className={styles.homeCard}>
-      <div>Scopri quale portafoglio Gamma fa al caso tuo</div>
+      <div className={styles.cardContent}>
+ <strong>Scopri il tuo portafoglio</strong>
+    <span>Rispondi a poche domande e trova quello giusto per te</span>
+    </div>
     </NavLink>
   );
 };

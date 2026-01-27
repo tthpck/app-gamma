@@ -18,7 +18,7 @@ position: fixed;
     align-items: center;
     background-color: black;
     border: none;
-    color: rgb(10, 221, 10);
+    color: hsl(120, 91%, 45%);
     border-radius: 5px;
     flex: 1;
     height: 100%;
@@ -35,8 +35,7 @@ position: fixed;
 
 }
 
-.navlink:active {
-  background-color: rgb(10, 221, 10);
-  color: black;
-  
+.active svg{
+  fill: currentColor;
+  stroke: currentColor;
 }

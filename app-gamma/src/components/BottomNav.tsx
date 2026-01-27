@@ -10,19 +10,28 @@ const BottomNav = () => {
   console.log(PortfolioIcon);
   return (
     <nav className={styles.nav}>
-      <NavLink className={styles.navlink} to="/">
+      <NavLink className={({ isActive }) =>
+    `${styles.navlink} ${isActive ? styles.active : ""}`
+  }
+   to="/">
         <Icons Icon={HomeIcon} size={30} />
       </NavLink>
 
-      <NavLink className={styles.navlink} to="/portafogli">
+      <NavLink className={({ isActive }) =>
+    `${styles.navlink} ${isActive ? styles.active : ""}`
+  } to="/portafogli">
         <Icons Icon={PortfolioIcon} size={30} />
       </NavLink>
 
-      <NavLink className={styles.navlink} to="/analisi">
+      <NavLink className={({ isActive }) =>
+    `${styles.navlink} ${isActive ? styles.active : ""}`
+  } to="/analisi">
         <Icons Icon={AnalysisIcon} size={30} />
       </NavLink>
 
-      <NavLink className={styles.navlink} to="/profilo">
+      <NavLink className={({ isActive }) =>
+    `${styles.navlink} ${isActive ? styles.active : ""}`
+  }to="/profilo">
         <Icons Icon={ProfileIcon} size={30} />
       </NavLink>
     </nav>

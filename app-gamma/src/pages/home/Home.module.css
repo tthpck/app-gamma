@@ -1,51 +1,81 @@
 body {
-    background-color: rgb(206, 206, 206);
-    margin: 0px;
-    color: black;
+  background-color: hsl(210, 11%, 96%);
+  margin: 0;
+  color: hsl(0, 0%, 7%);
 }
 
-.homePage{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    row-gap: 20px;
-    padding: 15px
+h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
 }
-.mainCard{
-    padding:15px;
-    color: black;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.homePage {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 20px 16px 90px;
 }
 
-.logo{
-    width: 100px;
-    border-radius: 15px;
+
+.mainCard {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 4px;
 }
+
 
 .welcomeCard {
-    font-size: 1.3em;
+    margin: 8px 0 16px
 }
+
+.welcomeCard p {
+      font-size: 0.85rem;
+  color: hsl(220, 9%, 46%);
+}
+
 
 .homeCard {
-    background-color: white;
-    border-radius: 10px;
-    border: 1px solid rgb(10, 221, 10);
-    padding: 15px;
-    text-align: center;
-    text-decoration: none;
-    color: black;
-    width: 80vw;
-    transition: all 0.02s;
+    background-color: hsl(0, 0%, 100%);
+      text-decoration: none;
+
+    border-radius: 16px;
+    padding: 18px 16px;
+      width: 100%;
+  max-width: 420px;
+      border-left: 4px solid hsl(120, 91%, 45%);
+
+    box-shadow: 0 8px 24px hsla(0, 0%, 0%, 0.06);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.homeCard:active{
-    background-color: rgb(10, 221, 10);
-    width: 78vw;
+.homeCard:active {
+  transform: scale(0.97);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
+.homeCard.primary {
+  border-left-width: 6px;
+  box-shadow: 0 10px 28px rgba(34, 197, 94, 0.18);
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cardContent strong {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111;
+}
+
+.cardContent span {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #6b7280; /* grigio moderno */
+  line-height: 1.3;
+}
 
 
 

@@ -1,4 +1,4 @@
-import styles from "./PortfolioCard.module.css";
+import styles from "./Portafogli.module.css";
 import { NavLink } from "react-router-dom";
 import type { Portfolio } from "../../types/portfolioTypes";
 import { formatMoney } from "../../utils/money";
