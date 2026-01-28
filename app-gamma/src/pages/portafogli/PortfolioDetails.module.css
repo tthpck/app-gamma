@@ -1,0 +1,35 @@
+.portfolioDetailsPage{
+  border-left: 4px solid hsl(120, 91%, 45%);
+  margin: 10px;
+  padding: 16px 8px;
+  background-color: white;
+}
+
+.subscribeButton{
+  background-color: hsla(120, 91%, 45%, 0.452);
+  text-decoration: none;
+  color: black;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  
+  display: block;
+  text-align: center;
+  padding: 10px;
+}
+
+.subscribeButton:active{
+    background-color: hsla(120, 91%, 45%);
+    transform: scale(0.90);
+}
+
+.helpCard { 
+  display: block;
+  margin: 20px;
+}
+
+.infoCard {
+  display: flex;
+  flex-direction: column;
+
+
+}

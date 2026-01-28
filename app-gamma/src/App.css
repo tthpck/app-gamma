@@ -1,4 +1,21 @@
 body{
+  margin: 0;
   font-family: 'Roboto';
   font-weight:  600;
+  background-color: hsl(210, 11%, 96%);
+  margin: 0;
+  color: hsl(0, 0%, 7%);
+}
+
+
+h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+span{ 
+    font-size: 0.85rem;
+  font-weight: 400;
+  color: #6b7280; /* grigio moderno */
+  line-height: 1.3;
 }

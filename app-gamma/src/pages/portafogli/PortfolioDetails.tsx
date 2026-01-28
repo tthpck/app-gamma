@@ -1,11 +1,19 @@
 import { getPortfolioById } from "../../../src/data/portfolios";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import styles from "./PortfolioDetails.module.css";
+import { portfolioIcons } from "./portfolioIcons";
+import Icons from "../../components/Icons";
+import type { PortfolioId } from "../../types/portfolioTypes";
 
 const PortfolioDetails = () => {
   const { id } = useParams<{ id: string }>();
 
-  if (!id) return <div>Portafoglio non valido!</div>;
+  function isPortfolioId(id: string): id is PortfolioId {
+    return id in portfolioIcons;
+  }
+
+  if (!id || !isPortfolioId(id)) return <div>Portafoglio non valido!</div>;
 
   const portfolio = getPortfolioById(id);
 
@@ -16,32 +24,47 @@ const PortfolioDetails = () => {
         <Link to="/portafogli">Torna ai portafogli</Link>
       </div>
     );
-  else
-    return (
+
+  const icon = portfolioIcons[portfolio.id];
+
+  const isPremium = portfolio.id === "advanced" || portfolio.id === "master";
+
+  return (
+    <div className={styles.portfolioDetailsPage}>
+      <h1> Portafoglio {portfolio.name}</h1>
       <div>
-        <div> Portafoglio {portfolio.name}</div>
-        <div> {portfolio.description}</div>
-        <a href={portfolio.subscribeURL}>Abbonati Ora</a>
-        {portfolio.help && <div> {portfolio.help}</div>}
-        <div> Liquidita' minima consigliata: {portfolio.minCapital}</div>
-        <div>
-          {" "}
-          Orizzonte temporale minimo consgliato: {portfolio.timeHorizon}
-        </div>
-        <div> Strumenti: {portfolio.instruments}</div>
-        <div>
-          {" "}
-          Media strumenti in portafoglio {portfolio.averageInstruments}
-        </div>
-        <div>
-          {" "}
-          Media operazioni mensili {portfolio.averageMonthlyOperations}
-        </div>
-        <div> Ribilanciamenti {portfolio.balancing}</div>
-        <div> Comunicazioni {portfolio.communications}</div>
-        {portfolio.extra && <div> Extra: {portfolio.extra}</div>}
+        <Icons size={75} color={"orange"} Icon={icon} />
       </div>
-    );
+      <span> {portfolio.description}</span>
+      {isPremium && (
+        <a className={styles.subscribeButton} href={portfolio.subscribeURL}>
+          Ottieni il portafoglio {portfolio.name}
+        </a>
+      )}
+      {portfolio.help && (
+        <span className={styles.helpCard}> {portfolio.help}</span>
+      )}
+      <div className={styles.infoCard}>
+        <strong> Liquidita' minima consigliata: </strong>
+        <span>{portfolio.minCapital}</span>
+        <strong>Orizzonte temporale minimo consgliato: </strong>
+        <span>{portfolio.timeHorizon}</span>
+        <strong>Strumenti:</strong> <span>{portfolio.instruments}</span>
+        <strong>Media strumenti in portafoglio </strong>
+        <span>{portfolio.averageInstruments}</span>
+        <strong>Media operazioni mensili</strong>
+        <span>{portfolio.averageMonthlyOperations}</span>
+        <strong>Ribilanciamenti</strong> <span>{portfolio.balancing}</span>
+        <strong>Comunicazioni</strong> <span>{portfolio.communications}</span>
+        {portfolio.extra && (
+          <>
+            <strong>Extra:</strong>
+            <span>{portfolio.extra}</span>
+          </>
+        )}
+      </div>
+    </div>
+  );
 };
 
 export default PortfolioDetails;

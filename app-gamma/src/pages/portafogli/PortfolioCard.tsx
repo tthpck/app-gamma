@@ -11,20 +11,21 @@ type Props = {
 
 const PortfolioCard = ({ portfolio }: Props) => {
   const icon = portfolioIcons[portfolio.id] ?? "";
-  const isPremium = portfolio.id === 'advanced' || portfolio.id === 'master'
+  const isPremium = portfolio.id === "advanced" || portfolio.id === "master";
   return (
     <NavLink
       to={`/dettagli/${portfolio.id}`}
       key={portfolio.id}
-      className={`${styles.portfolioCard} ${isPremium? styles.premium : ''}`}
+      className={`${styles.portfolioCard} ${isPremium ? styles.premium : ""}`}
     >
       <div className={styles.headerCard}>
         <h1>{portfolio.name}</h1>
-        <Icons Icon={icon} size={65} color = 
-      '#26db0aff'></Icons>
+        <Icons Icon={icon} size={65} color="orange"></Icons>
       </div>
 
-      <span className={styles.price}>{formatMoney(portfolio.monthlyPriceCents)}</span>
+      <span className={styles.price}>
+        {formatMoney(portfolio.monthlyPriceCents)}
+      </span>
       <div className={styles.infoCard}>
         <strong>Portfolio minimo</strong>
         <span>{portfolio.minCapital}</span>

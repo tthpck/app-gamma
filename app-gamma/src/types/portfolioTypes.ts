@@ -8,5 +8,6 @@ export type Portfolio = {
       instruments: string
 }
 
+export type PortfolioId = 'basic' | 'essential' | 'advanced' | 'master';
 
 
