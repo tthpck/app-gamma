@@ -4,22 +4,24 @@ import HomePortfoliosCard from "./HomePortfoliosCard";
 import HomeAnalysisCard from "./HomeAnalysisCard";
 import LoginCard from "./LoginCard";
 import PortfoglioUpdateCountDown from "./PortfoglioUpdateCountDown";
+import getUserTest from "../../data/userTest";
 
 function Home() {
-  const [userName, _] = useState<string>("");
+  const [user, setUser] = useState(getUserTest());
+
   return (
     <div className={styles.homePage}>
-      <LoginCard userName={userName} />
+      <LoginCard userName={user.firstName} />
       <div className={styles.mainCard}></div>
       <div className={styles.welcomeCard}>
         <h1>
-          {userName ? "Bentornato" : "Ciao"} {userName} !{" "}
+          {user ? "Bentornato" : "Ciao"} {user.firstName} !{" "}
         </h1>
       </div>
 
       <PortfoglioUpdateCountDown />
 
-      <HomePortfoliosCard />
+      <HomePortfoliosCard user={user} />
 
       <HomeAnalysisCard />
     </div>

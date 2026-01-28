@@ -1,16 +1,91 @@
 
-.optionButton {
-    border: 1px solid red;
-    border-radius: 5px;
-    height: fit-content;
+.questionnairePage{
+    background-color: white;
+    padding: 10px;
+    margin: 20px;
     display: flex;
     flex-direction: column;
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 15px;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
+        gap: 24px;
+}
+
+.startText{
+    text-align: center;
+}
+
+.startButton {
+    background-color: hsl(120, 91%, 45%);
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px
+}
+
+
+
+.optionButton {
+    border-left: 4px solid hsl(120, 91%, 45%);
+    border-right: 4px solid hsl(120, 91%, 45%);
+    border-top: 0.1px solid hsla(46, 91%, 45%, 0.466);
+    border-bottom: 0.1px solid hsla(46, 91%, 45%, 0.466);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 75vw;
+    min-height: 30px;
+    padding: 16px;
     text-decoration:none;
     color: black;
     text-align: center;
+}
+
+.backButton {
+    background-color: hsla(46, 91%, 45%, 0.466);
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+  align-self: flex-start;
+  margin-left: 0;
+  padding: 16px;
+
+}
+
+.result{
+    border-left: 4px solid hsl(46, 100%, 50%);
+    border-right: 4px solid hsl(46, 100%, 50%);
+        border-top: 0.1px solid hsla(120, 91%, 45%, 0.493);
+    border-bottom: 0.1px solid hsla(120, 91%, 45%, 0.493);
+    border-radius: 5px;
+    text-align: center;
+
+
+    color: black;
+    text-decoration: none;
+    padding:30px 16px
+}
+
+.resultPortfolio{
+    display: block;
+    font-size: 1.6rem;
+    margin-top: 20px;
+
+}
+.disclaimerText{
+    text-align: center;
+
+}
+
+.infoButton{
+    background-color: hsla(120, 91%, 45%, 0.493);
+    padding:16px;
+    display: block;
+    border-radius: 5px;
+    text-decoration: none;
+    color:black;
 }

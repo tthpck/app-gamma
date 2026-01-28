@@ -1,4 +1,4 @@
-export function pointsCheck(updatedPoints:number){
+export function pointsCheck(updatedPoints:number):string | undefined{
   if (updatedPoints >= 70) return "Master";
   if (updatedPoints >= 50 && updatedPoints < 70)
     return "Advanced";

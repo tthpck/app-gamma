@@ -1,27 +1,39 @@
 import { useEffect } from "react";
 import { pointsCheck } from "../../utils/pointsCheck";
-import styles from './Questionnaire.module.css'
+import styles from "./Questionnaire.module.css";
+import { NavLink } from "react-router-dom";
+import { updateUserTest } from "../../data/userTest";
 
 const ResultSuggestion = () => {
   const totalPoints = localStorage.getItem("points");
-
+  const updatedPoints = Number(totalPoints);
   useEffect(() => {
-    return () => localStorage.removeItem("points");
+    localStorage.removeItem("points");
+    updateUserTest({ suggestedPortfolio: pointsCheck(updatedPoints) });
   }, []);
   if (!totalPoints) return <div>Punteggio incorretto</div>;
 
-  const updatedPoints = Number(totalPoints);
   if (Number.isNaN(updatedPoints)) return <div>Punteggio incorretto</div>;
 
   return (
-    <div>
-      <div>
-        “Questo questionario fornisce un’indicazione orientativa e non
-        costituisce consulenza finanziaria.”
+    <div className={styles.questionnairePage}>
+      <div className={styles.result}>
+        <span>In base al tuo profilo, il piu' adatto e' il portafoglio</span>{" "}
+        <strong className={styles.resultPortfolio}>
+          {pointsCheck(updatedPoints)}
+        </strong>
       </div>
-      <div className={styles.optionButton}>
-        {`In base al tuo profilo, il piu' adatto e' il portafoglio ${pointsCheck(updatedPoints)} `}
-      </div>
+      <span className={styles.disclaymerText}>
+        Questo questionario fornisce un’indicazione orientativa e non
+        costituisce consulenza finanziaria.
+      </span>
+
+      <NavLink
+        className={styles.infoButton}
+        to={`/dettagli/${pointsCheck(updatedPoints)?.toLowerCase()}`}
+      >
+        Scopri il portafoglio {pointsCheck(updatedPoints)}
+      </NavLink>
     </div>
   );
 };

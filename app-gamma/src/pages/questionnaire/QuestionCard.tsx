@@ -2,9 +2,7 @@ import { useParams } from "react-router-dom";
 import { questionnaire } from "../../data/questionnaire";
 import { NavLink } from "react-router-dom";
 import QuestionnaireOption from "./QuestionnaireOption";
-import styles from './Questionnaire.module.css'
-
-
+import styles from "./Questionnaire.module.css";
 
 const QuestionCard = () => {
   const { id } = useParams();
@@ -20,22 +18,28 @@ const QuestionCard = () => {
   const isFirst = currentIndex === Number(questionnaire[0].id);
   const isLast = currentIndex >= questionnaire.length;
 
-
   return (
-    <div>
-          {!isFirst && (
-        <NavLink className = {styles.optionButton}to={`/questionario/${currentIndex - 1}`}>⬅</NavLink>
+    <div className={styles.questionnairePage}>
+      {!isFirst && (
+        <NavLink
+          className={styles.backButton}
+          to={`/questionario/${currentIndex - 1}`}
+        >
+          ⬅
+        </NavLink>
       )}
-      <div>{currentQuestionnaire?.question}</div>
+      <h1>{currentQuestionnaire?.question}</h1>
 
-        {currentQuestionnaire?.options?.map(option=>
-            <QuestionnaireOption isLast={isLast} pageId={currentIndex} key={option.id} option={option}/>
-        )}
-
-   
-
+      {currentQuestionnaire?.options?.map((option) => (
+        <QuestionnaireOption
+          isLast={isLast}
+          pageId={currentIndex}
+          key={option.id}
+          option={option}
+        />
+      ))}
     </div>
   );
-}
+};
 
 export default QuestionCard;
