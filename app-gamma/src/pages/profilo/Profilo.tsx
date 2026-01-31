@@ -1,18 +1,27 @@
-import getUserTest from "../../data/userTest";
-import { useState } from "react";
+import getUserTest, { updateUserTest } from "../../data/userTest";
 import ProfileUserName from "./ProfileUserName";
+import { useState } from "react";
+import ContactUs from "./ContactUs";
 
 const Profilo = () => {
-  const user = getUserTest();
+  const [user, setUser] = useState(getUserTest());
+
+  function handleUpdateUserName(newUserName: string) {
+    updateUserTest({ userName: newUserName });
+    setUser(getUserTest());
+  }
   return (
     <>
-      <ProfileUserName user={user} />
+      <ProfileUserName
+        user={user}
+        handleUpdateUserName={handleUpdateUserName}
+      />
 
       <div>Dark mode</div>
 
       <div>FAQ</div>
 
-      <div>Contattaci</div>
+      <ContactUs />
 
       <div>Lascia una recensione</div>
     </>

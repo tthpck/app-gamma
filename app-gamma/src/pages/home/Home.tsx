@@ -11,11 +11,11 @@ function Home() {
 
   return (
     <div className={styles.homePage}>
-      <LoginCard userName={user.firstName} />
+      <LoginCard userName={user.userName} />
       <div className={styles.mainCard}></div>
       <div className={styles.welcomeCard}>
         <h1>
-          {user ? "Bentornato" : "Ciao"} {user.firstName} !{" "}
+          {user ? "Bentornato" : "Ciao"} {user.userName} !{" "}
         </h1>
       </div>
 
