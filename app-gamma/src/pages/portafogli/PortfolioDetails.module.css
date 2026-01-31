@@ -1,14 +1,14 @@
 .portfolioDetailsPage{
-  border-left: 4px solid hsl(120, 91%, 45%);
+  border-left: 4px solid var(--secondaryColor);
   margin: 10px;
   padding: 16px 8px;
-  background-color: white;
+  background-color: var(--cardBackground);
 }
 
 .subscribeButton{
-  background-color: hsla(120, 91%, 45%, 0.452);
+  background-color: var(--secondaryColor);
   text-decoration: none;
-  color: black;
+  color: var(--text);
   border-radius: 5px;
   font-size: 1.2rem;
   
@@ -18,7 +18,7 @@
 }
 
 .subscribeButton:active{
-    background-color: hsla(120, 91%, 45%);
+    background-color: var(--secondaryColor);
     transform: scale(0.90);
 }
 

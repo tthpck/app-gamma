@@ -1,7 +1,15 @@
+<<<<<<< Updated upstream
 import getUserTest, { updateUserTest } from "../../data/userTest";
 import ProfileUserName from "./ProfileUserName";
 import { useState } from "react";
 import ContactUs from "./ContactUs";
+=======
+import { NavLink } from "react-router-dom";
+import getUserTest from "../../data/userTest";
+import FAQ from "./FAQ";
+import ProfileUserName from "./ProfileUserName";
+import { DarkModeToggle } from "./DarkModeToggle";
+>>>>>>> Stashed changes
 
 const Profilo = () => {
   const [user, setUser] = useState(getUserTest());
@@ -17,13 +25,13 @@ const Profilo = () => {
         handleUpdateUserName={handleUpdateUserName}
       />
 
-      <div>Dark mode</div>
+      <DarkModeToggle />
 
-      <div>FAQ</div>
+      <NavLink to='/FAQ/'>FAQ</NavLink>
 
       <ContactUs />
 
-      <div>Lascia una recensione</div>
+      <NavLink to='https://it.trustpilot.com/review/gammainvestimenti.it'>Lascia una recensione</NavLink>
     </>
   );
 };

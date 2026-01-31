@@ -18,7 +18,7 @@ position: fixed;
     align-items: center;
     background-color: black;
     border: none;
-    color: hsl(120, 91%, 45%);
+    color: var(--secondaryColor);
     border-radius: 5px;
     flex: 1;
     height: 100%;
@@ -28,12 +28,6 @@ position: fixed;
     outline: none; /* per rimuovere effetto standard */
 }
 
-
-.navlink-active {
-  background-color: black; /* SOLO il tuo stile */
-  color: white;
-
-}
 
 .active svg{
   fill: currentColor;

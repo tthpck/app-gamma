@@ -11,36 +11,32 @@ h1 {
 }
 
 .analysisCard {
-  background-color: white;
+  background-color: var(--backgroundColor);
   text-decoration: none;
 
   padding: 18px 16px;
   border-radius: 16px;
-  border-left: 4px solid hsl(120, 91%, 45%);
+  border-left: 4px solid var(--secondaryColor);
   box-sizing: border-box;
   width: 100%;
   max-width: 420px;
 
-  color: black;
+  color: var(--text);
 
-  box-shadow: 0 8px 24px hsla(0, 0%, 0%, 0.06);
+  box-shadow: var(--cardShadowStandard);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .analysisCard:active {
   transform: scale(0.97);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--cardShadowStandard)
 }
 
-
-.analysisCard strong {
-
-}
 
 .analysisCard span {
     font-size: 0.85rem;
   font-weight: 400;
-  color: #6b7280;
+  color: var(--lightText);
   line-height: 1.3;
 }
 

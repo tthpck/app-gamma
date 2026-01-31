@@ -1,0 +1,25 @@
+.FAQsection {
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    padding: 30px;
+    background-color: white;
+    border-radius: 16px;
+    margin: 30px;
+    min-height: 70dvh;
+}
+
+.FAQdetails {
+    border-radius: 3px;
+    border-top: .5px solid orange;
+    border-bottom: .5px solid orange;
+    min-height: 8dvh;
+    display: flex;
+    flex-direction: column;
+align-items: center;}
+
+.FAQinfo{
+    align-self: baseline;
+}

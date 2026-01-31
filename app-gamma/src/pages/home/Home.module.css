@@ -21,12 +21,12 @@
 
 .welcomeCard p {
       font-size: 0.85rem;
-  color: hsl(220, 9%, 46%);
+  color: var(--lightText)
 }
 
 
 .homeCard {
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--backgroundColor);
     text-decoration: none;
 
     border-radius: 16px;
@@ -34,21 +34,21 @@
     box-sizing: border-box;
     width: 100%;
     max-width: 420px;
-    border-left: 4px solid hsl(120, 91%, 45%);
+    border-left: 4px solid var(--secondaryColor);
 
-    box-shadow: 0 8px 24px hsla(0, 0%, 0%, 0.06);
+    box-shadow: var(--cardShadowStandard);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
   
 }
 
 .homeCard:active {
   transform: scale(0.97);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--cardShadowStandard);
 }
 
 .homeCard.primary {
   border-left-width: 6px;
-  box-shadow: 0 10px 28px rgba(34, 197, 94, 0.18);
+  box-shadow: var(--cardShadowPrimary)
 }
 
 .cardContent {
@@ -60,22 +60,22 @@
 .cardContent strong {
   font-size: 1rem;
   font-weight: 600;
-  color: #111;
+  color: var(--text)
 }
 
 .cardContent span {
   font-size: 0.85rem;
   font-weight: 400;
-  color: #6b7280; 
+  color: var(--lightText);
   line-height: 1.3;
 }
 
 .loginCard{
-  border-left: 6px solid orange;
+  border-left: 6px solid var(--thirdColor);
 }
 
 .suggestedPortfolio {
-  color: rgb(216, 141, 1);
+  color: var(--thirdColor);
   font-size: 1.2rem;
 }
 

@@ -1,6 +1,6 @@
 
 .questionnairePage{
-    background-color: white;
+    background-color: var(--cardBackground);
     padding: 10px;
     margin: 20px;
     display: flex;
@@ -16,9 +16,9 @@
 }
 
 .startButton {
-    background-color: hsl(120, 91%, 45%);
+    background-color: var(--secondaryColor);
     text-decoration: none;
-    color: black;
+    color: var(--text);
     border-radius: 5px;
     display: block;
     text-align: center;
@@ -29,10 +29,10 @@
 
 
 .optionButton {
-    border-left: 4px solid hsl(120, 91%, 45%);
-    border-right: 4px solid hsl(120, 91%, 45%);
-    border-top: 0.1px solid hsla(46, 91%, 45%, 0.466);
-    border-bottom: 0.1px solid hsla(46, 91%, 45%, 0.466);
+    border-left: 4px solid var(--secondaryColor);
+    border-right: 4px solid var(--secondaryColor);
+    border-top: 0.1px solid var(--lightText);
+    border-bottom: 0.1px solid var(--lightText);
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -41,14 +41,14 @@
     min-height: 30px;
     padding: 16px;
     text-decoration:none;
-    color: black;
+    color: var(--text);
     text-align: center;
 }
 
 .backButton {
-    background-color: hsla(46, 91%, 45%, 0.466);
+    background-color: var(--lightText);
     text-decoration: none;
-    color: black;
+    color: var(--text);
     border-radius: 5px;
   align-self: flex-start;
   margin-left: 0;
@@ -57,15 +57,15 @@
 }
 
 .result{
-    border-left: 4px solid hsl(46, 100%, 50%);
+    border-left: 4px solid var(--thirdColor);
     border-right: 4px solid hsl(46, 100%, 50%);
-        border-top: 0.1px solid hsla(120, 91%, 45%, 0.493);
-    border-bottom: 0.1px solid hsla(120, 91%, 45%, 0.493);
+        border-top: 0.1px solid var(--secondaryColor);
+    border-bottom: 0.1px solid var(--secondaryColor);
     border-radius: 5px;
     text-align: center;
 
 
-    color: black;
+    color: var(--text);
     text-decoration: none;
     padding:30px 16px
 }
@@ -82,10 +82,10 @@
 }
 
 .infoButton{
-    background-color: hsla(120, 91%, 45%, 0.493);
+    background-color: var(--secondaryColor);
     padding:16px;
     display: block;
     border-radius: 5px;
     text-decoration: none;
-    color:black;
+    color:var(--text);
 }

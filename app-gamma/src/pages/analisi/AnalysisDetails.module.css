@@ -2,10 +2,10 @@
   padding: 36px 20px;
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: var(--backgroundColor);
   margin: 18px;
   border-radius: 10px;
-  border-right: 4px solid hsl(120, 91%, 45%);
+  border-right: 4px solid var(--secondaryColor);
 }
 
 .analysisDate{

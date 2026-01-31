@@ -10,6 +10,7 @@ import AnalysisDetails from "./pages/analisi/AnalysisDetails.tsx";
 import QuestionnairePage from "./pages/questionnaire/QuestionnairePage.tsx";
 import QuestionCard from "./pages/questionnaire/QuestionCard.tsx";
 import ResultSuggestion from "./pages/questionnaire/ResultSuggestion.tsx";
+import FAQ from "./pages/profilo/FAQ.tsx";
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
             <Route path={"/questionario"} element={<QuestionnairePage />} />
             <Route path={"/questionario/:id"} element={<QuestionCard />} />
             <Route path="/risultati/" element={<ResultSuggestion />} />
+            <Route path="/FAQ/" element={<FAQ />} />
           </Routes>
         </Layout>
       </BrowserRouter>
