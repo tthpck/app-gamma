@@ -1,6 +1,8 @@
 import toggleStyles from "./DarkModeToggle.module.css";
 import profileStyles from "./profile.module.css";
 import { useState, useEffect } from "react";
+import Icons from '../../components/Icons'
+import DarkModeToggleIcon from '../../images/profilePage/darkMode.svg?react'
 
 export const DarkModeToggle = () => {
   const [checkStatus, setCheckStatus] = useState<boolean>(false);
@@ -19,9 +21,10 @@ export const DarkModeToggle = () => {
 
   return (
     <div className={profileStyles.profileCard}>
-      <p>Dark mode</p>
+      <Icons Icon={DarkModeToggleIcon}size={30}/>
+      <p className={profileStyles.profileText}>Dark mode</p>
 
-      <label className={toggleStyles.switch}>
+      <label className={`${toggleStyles.switch} ${profileStyles.switch}`}>
         <input
           onChange={() => setCheckStatus(!checkStatus)}
           type="checkbox"

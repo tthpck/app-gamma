@@ -2,19 +2,59 @@
 .profilePage{
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 8px;
 
   padding: 16px
 }
 
 .profileCard{
-  border-radius: 5px;
+  border-radius: 10px;
+  border-left: 4px solid var(--secondaryColor);
+  padding: 16px;
   background-color: var(--cardBackground);
   box-shadow: var(--cardShadowStandard);
-  min-height: 95px;
+  min-height: 60px;
   display: flex;
   align-items: center;
   color: var(--text);
   text-decoration: none;
   font-size: 1.2rem;
+}
+
+.profileText{ 
+  margin-left: 10px;
+}
+
+.modifyButton, .confirmButton{
+  border-radius: 4px;
+  border: none;
+  background-color: var(--text);
+  color: var(--backgroundColor);
+    margin-left: auto;
+    padding:8px;
+    font-size: 1.1rem;
+}
+
+.inputName{
+  background-color: var(--backgroundColor);
+  border: 1px solid var(--thirdColor);
+  margin-left: auto;
+  color:var(--text);
+  padding: 8px;
+}
+
+.switch {
+  margin-left:auto;
+}
+
+.contactUsIcons {
+  margin-left: auto;
+}
+
+.telegramIcon{
+  margin-right: 15px;
+}
+
+.trustIcon {
+  margin-left: auto;
 }

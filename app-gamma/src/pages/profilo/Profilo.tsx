@@ -6,6 +6,13 @@ import { useState } from "react";
 import ContactUs from "./ContactUs";
 import { updateUserTest } from "../../data/userTest";
 import styles from "./profile.module.css";
+import Icons from "../../components/Icons";
+import FAQIcon from '../../images/profilePage/FAQ.svg?react';
+import reviewIcon from '../../images/profilePage/review.svg?react';
+import logoutIcon from '../../images/profilePage/logout.svg?react';
+import trustPilotIcon from '../../images/profilePage/trustPilot.svg?react';
+
+
 
 const Profilo = () => {
   const [user, setUser] = useState(getUserTest());
@@ -26,7 +33,8 @@ const Profilo = () => {
       <DarkModeToggle />
 
       <NavLink className={styles.profileCard} to="/FAQ/">
-        FAQ
+      <Icons Icon = {FAQIcon} size ={30}/>
+        <p className={styles.profileText}>FAQ</p>
       </NavLink>
 
       <ContactUs />
@@ -36,10 +44,16 @@ const Profilo = () => {
         target="_blank"
         to="https://it.trustpilot.com/review/gammainvestimenti.it"
       >
-        Lascia una recensione
+        <Icons Icon={reviewIcon} size={30}/>
+        <p className={styles.profileText}>Lascia una recensione</p>
+        <div className={styles.trustIcon}><Icons Icon={trustPilotIcon} size={40}/></div>
       </NavLink>
 
-      <div className={styles.profileCard}>Logout</div>
+      <div className={styles.profileCard}>
+        <Icons Icon={logoutIcon} size={30}/>
+        <p className={styles.profileText}>Logout</p>
+      
+      </div>
     </div>
   );
 };

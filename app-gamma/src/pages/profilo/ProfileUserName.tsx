@@ -1,6 +1,8 @@
 import { useState } from "react";
 import type { User } from "../../data/userTest";
 import styles from "./profile.module.css";
+import Icons from "../../components/Icons";
+import ProfileIcon from '../../images/profilePage/profilo.svg?react'
 
 type Props = {
   user: User;
@@ -28,17 +30,20 @@ const ProfileUserName = ({ user, handleUpdateUserName }: Props) => {
 
   return (
     <div className={styles.profileCard}>
-      {user.userName}
+      <Icons Icon={ProfileIcon} size={30}/>
 
-      {!isUpdating && <button onClick={handleUpdate}>Modifica</button>}
+      <p className={styles.profileText}>{!user.userName? "" : user.userName?.charAt(0).toUpperCase() + user.userName?.substring(1)}</p>
+
+      {!isUpdating && <button className ={styles.modifyButton} onClick={handleUpdate}>Modifica</button>}
       {isUpdating && (
         <>
           <input
+          className={styles.inputName}
             type="text"
             value={inputValue}
             onChange={(e) => handleInput(e)}
           ></input>{" "}
-          <button onClick={handleConfirm}>Conferma</button>
+          <button className ={styles.confirmButton} onClick={handleConfirm}>Conferma</button>
         </>
       )}
 

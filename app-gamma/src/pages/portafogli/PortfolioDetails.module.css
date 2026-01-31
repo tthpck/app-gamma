@@ -30,6 +30,8 @@
 .infoCard {
   display: flex;
   flex-direction: column;
+}
 
-
+.contactUsIcon{
+  margin-left: auto
 }

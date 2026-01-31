@@ -1,10 +1,14 @@
 import { getPortfolioById } from "../../../src/data/portfolios";
 import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import styles from "./PortfolioDetails.module.css";
 import { portfolioIcons } from "./portfolioIcons";
 import Icons from "../../components/Icons";
 import type { PortfolioId } from "../../types/portfolioTypes";
+import telegramIcon from '../../images/contactus/telegram.svg?react'
+import whatsappIcon from '../../images/contactus/whatsapp.svg?react'
+
+
 
 const PortfolioDetails = () => {
   const { id } = useParams<{ id: string }>();
@@ -42,7 +46,16 @@ const PortfolioDetails = () => {
         </a>
       )}
       {portfolio.help && (
-        <span className={styles.helpCard}> {portfolio.help}</span>
+        <div className={styles.helpCard}> <span>{portfolio.help}</span>
+        <div>
+          <NavLink className={styles.contactUsIcon}to={`https://t.me/manuel_gamma`}>
+          <Icons Icon={telegramIcon} size={30}/></NavLink>
+          <NavLink className={styles.contactUsIcon} to={`https://web.whatsapp.com/send?phone=393337926257`}>
+          <Icons Icon={whatsappIcon} size={30}/></NavLink>
+        </div>
+        
+        
+        </div>
       )}
       <div className={styles.infoCard}>
         <strong> Liquidita' minima consigliata: </strong>
