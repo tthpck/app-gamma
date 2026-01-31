@@ -2,10 +2,11 @@ import Icons from "../../components/Icons";
 import telegramIcon from "../../images/contactus/telegram.svg?react";
 import whatsappIcon from "../../images/contactus/whatsapp.svg?react";
 import { NavLink } from "react-router-dom";
+import styles from "./profile.module.css";
 
 const ContactUs = () => {
   return (
-    <div>
+    <div className={styles.profileCard}>
       Contattaci su
       <NavLink to={`https://t.me/manuel_gamma`}>
         <Icons Icon={telegramIcon} size={20} />

@@ -1,15 +1,11 @@
-<<<<<<< Updated upstream
-import getUserTest, { updateUserTest } from "../../data/userTest";
-import ProfileUserName from "./ProfileUserName";
-import { useState } from "react";
-import ContactUs from "./ContactUs";
-=======
 import { NavLink } from "react-router-dom";
 import getUserTest from "../../data/userTest";
-import FAQ from "./FAQ";
 import ProfileUserName from "./ProfileUserName";
 import { DarkModeToggle } from "./DarkModeToggle";
->>>>>>> Stashed changes
+import { useState } from "react";
+import ContactUs from "./ContactUs";
+import { updateUserTest } from "../../data/userTest";
+import styles from "./profile.module.css";
 
 const Profilo = () => {
   const [user, setUser] = useState(getUserTest());
@@ -19,20 +15,32 @@ const Profilo = () => {
     setUser(getUserTest());
   }
   return (
-    <>
-      <ProfileUserName
-        user={user}
-        handleUpdateUserName={handleUpdateUserName}
-      />
+    <div className={styles.profilePage}>
+      <div>
+        <ProfileUserName
+          user={user}
+          handleUpdateUserName={handleUpdateUserName}
+        />
+      </div>
 
       <DarkModeToggle />
 
-      <NavLink to='/FAQ/'>FAQ</NavLink>
+      <NavLink className={styles.profileCard} to="/FAQ/">
+        FAQ
+      </NavLink>
 
       <ContactUs />
 
-      <NavLink to='https://it.trustpilot.com/review/gammainvestimenti.it'>Lascia una recensione</NavLink>
-    </>
+      <NavLink
+        className={styles.profileCard}
+        target="_blank"
+        to="https://it.trustpilot.com/review/gammainvestimenti.it"
+      >
+        Lascia una recensione
+      </NavLink>
+
+      <div className={styles.profileCard}>Logout</div>
+    </div>
   );
 };
 

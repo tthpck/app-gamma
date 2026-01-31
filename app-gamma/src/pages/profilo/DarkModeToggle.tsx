@@ -1,19 +1,34 @@
-import styles from './DarkModeToggle.module.css'
-
+import toggleStyles from "./DarkModeToggle.module.css";
+import profileStyles from "./profile.module.css";
+import { useState, useEffect } from "react";
 
 export const DarkModeToggle = () => {
+  const [checkStatus, setCheckStatus] = useState<boolean>(false);
 
-    function handleClick(){
-        document.documentElement.classList.toggle("dark")
+  useEffect(() => {
+    const theme = localStorage.getItem("theme");
+    if (theme === "dark") {
+      setCheckStatus(true);
     }
-  return (
-    <>
-     Dark mode
+  }, []);
 
-      <label onChange={handleClick}className={styles.switch}>
-  <input type="checkbox"/>
-  <span className={styles.slider}></span>
-</label>
-</>
-  )
-}
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", checkStatus);
+    localStorage.setItem("theme", checkStatus ? "dark" : "");
+  }, [checkStatus]);
+
+  return (
+    <div className={profileStyles.profileCard}>
+      <p>Dark mode</p>
+
+      <label className={toggleStyles.switch}>
+        <input
+          onChange={() => setCheckStatus(!checkStatus)}
+          type="checkbox"
+          checked={checkStatus}
+        />
+        <span className={toggleStyles.slider}></span>
+      </label>
+    </div>
+  );
+};

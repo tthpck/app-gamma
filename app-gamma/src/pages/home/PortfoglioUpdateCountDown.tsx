@@ -21,10 +21,10 @@ const PortfoglioUpdateCountDown = () => {
     const hours = Math.floor((timeDifference / (1000 * 60 * 60)) % 24);
     const minutes = Math.floor((timeDifference / (1000 * 60)) % 60);
     const seconds = Math.floor((timeDifference / 1000) % 60);
-    const d = days > 1 ? "giorni" : "giorno";
-    const h = hours > 1 ? "ore" : "ora";
-    const m = minutes > 1 ? "minuti" : "minuto";
-    const s = seconds > 1 ? "secondi" : "secondo";
+    const d = days !== 1 ? "giorni" : "giorno";
+    const h = hours !== 1 ? "ore" : "ora";
+    const m = minutes !== 1 ? "minuti" : "minuto";
+    const s = seconds !== 1 ? "secondi" : "secondo";
     return `${days} ${d} ${hours} ${h} ${minutes} ${m} ${seconds} ${s}`;
   }
   const [countdown, setCountdown] = useState(() => calculateCountdown());
@@ -36,10 +36,16 @@ const PortfoglioUpdateCountDown = () => {
     return () => clearInterval(intervalId);
   }, []);
   return (
-    <NavLink to='/portafogli' className={`${styles.homeCard} ${styles.primary}`} >
-      <div className={styles.cardContent}><strong>Prossimo aggiornamento ai portafogli{` ${nextPortfolioUpdateDate}`}</strong>
-           <span>{countdown}</span>
-    </div>
+    <NavLink
+      to="/portafogli"
+      className={`${styles.homeCard} ${styles.primary}`}
+    >
+      <div className={styles.cardContent}>
+        <strong>
+          Prossimo aggiornamento ai portafogli{` ${nextPortfolioUpdateDate}`}
+        </strong>
+        <span>{countdown}</span>
+      </div>
     </NavLink>
   );
 };

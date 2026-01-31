@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { User } from "../../data/userTest";
+import styles from "./profile.module.css";
 
 type Props = {
   user: User;
@@ -26,7 +27,7 @@ const ProfileUserName = ({ user, handleUpdateUserName }: Props) => {
   }
 
   return (
-    <div>
+    <div className={styles.profileCard}>
       {user.userName}
 
       {!isUpdating && <button onClick={handleUpdate}>Modifica</button>}

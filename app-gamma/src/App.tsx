@@ -11,8 +11,15 @@ import QuestionnairePage from "./pages/questionnaire/QuestionnairePage.tsx";
 import QuestionCard from "./pages/questionnaire/QuestionCard.tsx";
 import ResultSuggestion from "./pages/questionnaire/ResultSuggestion.tsx";
 import FAQ from "./pages/profilo/FAQ.tsx";
+import { useEffect } from "react";
 
 const App = () => {
+  useEffect(() => {
+    const theme = localStorage.getItem("theme");
+
+    if (theme === "dark") document.documentElement.classList.add("dark");
+  }, []);
+
   return (
     <>
       <BrowserRouter>
