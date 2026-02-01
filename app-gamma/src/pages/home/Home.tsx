@@ -15,7 +15,7 @@ function Home() {
       <div className={styles.mainCard}></div>
       <div className={styles.welcomeCard}>
         <h1>
-          {user ? "Bentornato" : "Ciao"} {user.userName} !{" "}
+          {user ? "Bentornato" : "Ciao"} {!user.userName? '' : user.userName?.charAt(0).toUpperCase() + user.userName?.substring(1)} !{" "}
         </h1>
       </div>
 
